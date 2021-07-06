@@ -140,7 +140,7 @@ steps:
         # Validate input JSON.
         echo "Validating input JSON";
         echo '<< parameters.code-param-name-map >>' | jq type || { echo "Invalid input map JSON"; exit 1; }
-        echo '<< parameters.additional-param-map >>' | jq type || { echo "Invalid additional param map JSON"; exit 1; }
+        echo "<< parameters.additional-param-map >>" | jq type || { echo "Invalid additional param map JSON"; exit 1; }
 
         append_string_to_params() {
           current_data=`cat /tmp/swissknife/workflow_params.json`
