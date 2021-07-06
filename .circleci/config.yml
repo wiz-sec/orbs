@@ -6,7 +6,7 @@ parameters:
     default: false
   dev-orb-version:
     type: string
-    default: "dev:alpha"
+    default: "0.6.0"
 
 orbs:
   orb-tools: circleci/orb-tools@9.2.1
