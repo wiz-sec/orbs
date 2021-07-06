@@ -149,7 +149,7 @@ steps:
 
         mkdir -p /tmp/swissknife
         touch /tmp/swissknife/workflow_params.json
-        echo '<< parameters.additional-param-map >>' | jq -j . > /tmp/swissknife/workflow_params.json
+        echo "<< parameters.additional-param-map >>" | jq -j . > /tmp/swissknife/workflow_params.json
         <<# parameters.use-swissknife-sha >>
         append_string_to_params "swissknife_sha" $CIRCLE_SHA1
         <</ parameters.use-swissknife-sha >>
